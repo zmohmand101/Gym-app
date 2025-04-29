@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><title>Trainer Dashboard</title></head>
+<body>
+  <h1>All Trainers</h1>
+  <ul>
+    {% for trainer in trainers %}
+      <li><a href="/trainer/{{ trainer.id }}">{{ trainer.name }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

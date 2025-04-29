@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head><title>{{ trainer.name }}'s Info</title></head>
+<body>
+  <h1>{{ trainer.name }}</h1>
+  <p>Email: {{ trainer.email }}</p>
+  <h2>Clients</h2>
+  <ul>
+    {% for client in clients %}
+      <li>{{ client.name }}</li>
+    {% endfor %}
+  </ul>
+  <h2>Sessions</h2>
+  <ul>
+    {% for session in sessions %}
+      <li>Session with Client ID {{ session.client_id }} - ${{ session.price }}</li>
+    {% endfor %}
+  </ul>
+  <p><strong>Total Revenue:</strong> ${{ revenue }}</p>
+  <p><a href="/">Back to Dashboard</a></p>
+</body>
+</html>
